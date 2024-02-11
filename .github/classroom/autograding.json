@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "VirtualPetCreation",
+      "setup": "",
+      "run": "@Test     void testVirtualPetCreation() {         VirtualPet pet = new VirtualPet();         assertNotNull(pet, \"The pet should not be null after creation.\");     }",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
