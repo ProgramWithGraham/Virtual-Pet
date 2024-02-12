@@ -75,7 +75,7 @@ public class VirtualPet {
         return petDetails;
     }
 
-    public void tick() {
+    public void Tick() {
         this.setHungerLevel(this.getHungerLevel() + 10);
         this.setThirstLevel(this.getThirstLevel() + 5);
         this.setBoredomLevel(this.getBoredomLevel() + 8);
