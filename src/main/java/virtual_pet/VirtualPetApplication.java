@@ -3,20 +3,20 @@ package virtual_pet;
 public class VirtualPetApplication {
 
     public static void main(String[] args) {
-        VirtualPet dogNamedKrypto = new VirtualPet("Krypto, the Super Dog", 0, 0, 0);
-        dogNamedKrypto.tick();
+        VirtualPet superPet = new VirtualPet("Krypto, the Super Dog", 0, 0, 0);
+        superPet.Tick();
         // int feedTheDog = dogNamedKrypto.Feed();
         // System.out.println(feedTheDog);
-        dogNamedKrypto.tick();
-        dogNamedKrypto.tick();
+        superPet.Tick();
+        superPet.Tick();
 
-        System.out.println(dogNamedKrypto);
-        System.out.println("Food: " + dogNamedKrypto.Feed() + " Thirst: " + dogNamedKrypto.GiveWater() + " Boredom: "
-                + dogNamedKrypto.PlayFetch());
+        System.out.println(superPet);
+        System.out.println("Food: " + superPet.Feed() + " Thirst: " + superPet.GiveWater() + " Boredom: "
+                + superPet.PlayFetch());
 
         while (true) {
 
-            dogNamedKrypto.tick();
+            superPet.Tick();
         }
     }
 
