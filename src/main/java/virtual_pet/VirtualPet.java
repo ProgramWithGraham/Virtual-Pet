@@ -15,9 +15,19 @@ public class VirtualPet {
 
     public VirtualPet(String petName, int hungerLevel, int thirstLevel, int boredomLevel) {
         this.petName = petName;
-        this.hungerLevel = 0;
-        this.thirstLevel = 0;
-        this.boredomLevel = 0;
+        this.hungerLevel = hungerLevel;
+        this.thirstLevel = thirstLevel;
+        this.boredomLevel = boredomLevel;
+    }
+
+    public void printUserInstructions() {
+        System.out.println(" ");
+        System.out.println("Please enter a number input from the following options: ");
+        System.out.println(" 1. Feed your pet");
+        System.out.println(" 2. Give your pet water");
+        System.out.println(" 3. Play with your virtual pet");
+        System.out.println(" 4. Get pet stats");
+        System.out.println(" 5. End the program");
     }
 
     public String getPetName() {
@@ -52,19 +62,16 @@ public class VirtualPet {
         this.boredomLevel = boredomLevel;
     }
 
-    public int Feed() {
-        int feed = hungerLevel - 10;
-        return feed;
+    public void Feed() {
+        hungerLevel += 10;
     }
 
-    public int GiveWater() {
-        int giveWater = thirstLevel - 10;
-        return giveWater;
+    public void GiveWater() {
+        thirstLevel += 10;
     }
 
-    public int PlayFetch() {
-        int playFetch = boredomLevel - 10;
-        return playFetch;
+    public void PlayFetch() {
+        boredomLevel += 10;
     }
 
     @Override
@@ -76,9 +83,10 @@ public class VirtualPet {
     }
 
     public void Tick() {
-        this.setHungerLevel(this.getHungerLevel() + 10);
-        this.setThirstLevel(this.getThirstLevel() + 5);
-        this.setBoredomLevel(this.getBoredomLevel() + 8);
+        this.setHungerLevel(this.getHungerLevel() - 6);
+        this.setThirstLevel(this.getThirstLevel() - 5);
+        this.setBoredomLevel(this.getBoredomLevel() - 8);
         // increase this calling objects thirst, hunger, boredom
     }
+
 }
