@@ -2,38 +2,43 @@ package virtual_pet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class VirtualPetTest {
-    private VirtualPet superPet;
-
-    @BeforeEach
-    public void setup() {
-        VirtualPet superPet = new VirtualPet("Krypto, the Super Dog", 50, 50, 50);
-
-    }
 
     @Test
-
     public void testFeed() {
-        // assertEquals(50, superPet.Feed());
+        VirtualPet testPet = new VirtualPet(null, 10, 10, 10);
+        // int hungerLevel = testPet.getHungerLevel();
+        // hungerLevel = 4;
+        int hungerLevel = (testPet.Feed() + 4);
+        // testPet.setHungerLevel(10);
+        assertEquals(20, hungerLevel);
     }
 
     @Test
     public void testGiveWater() {
-        // assertEquals(40, superPet.GiveWater());
+        VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
+
+        assertEquals(10, superPet.GiveWater());
 
     }
 
     @Test
     public void testPlayFetch() {
-        // assertEquals(40, superPet.PlayFetch());
+        VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
+
+        assertEquals(10, superPet.PlayFetch());
 
     }
 
     @Test
     public void testTick() {
+        // this.setHungerLevel(this.getHungerLevel() - 5);
+        // this.setThirstLevel(this.getThirstLevel() - 4);
+        // this.setBoredomLevel(this.getBoredomLevel() - 6);
+        // VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
 
+        // assertEquals(-5, superPet.tick());
     }
 }

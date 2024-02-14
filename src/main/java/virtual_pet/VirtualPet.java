@@ -30,6 +30,10 @@ public class VirtualPet {
         System.out.println(" 5. End the program");
     }
 
+    public VirtualPet() {
+
+    }
+
     public String getPetName() {
         return petName;
     }
@@ -62,16 +66,19 @@ public class VirtualPet {
         this.boredomLevel = boredomLevel;
     }
 
-    public void Feed() {
-        hungerLevel += 10;
+    public int Feed() {
+        this.hungerLevel += 15;
+        return hungerLevel;
     }
 
-    public void GiveWater() {
-        thirstLevel += 10;
+    public int GiveWater() {
+        this.thirstLevel += 15;
+        return thirstLevel;
     }
 
-    public void PlayFetch() {
-        boredomLevel += 10;
+    public int PlayFetch() {
+        this.boredomLevel += 15;
+        return boredomLevel;
     }
 
     @Override
@@ -83,9 +90,9 @@ public class VirtualPet {
     }
 
     public void Tick() {
-        this.setHungerLevel(this.getHungerLevel() - 6);
-        this.setThirstLevel(this.getThirstLevel() - 5);
-        this.setBoredomLevel(this.getBoredomLevel() - 8);
+        hungerLevel -= 5;
+        thirstLevel -= 4;
+        boredomLevel -= 6;
         // increase this calling objects thirst, hunger, boredom
     }
 
