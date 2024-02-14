@@ -8,12 +8,13 @@ public class VirtualPetTest {
 
     @Test
     public void testFeed() {
-        VirtualPet testPet = new VirtualPet(null, 10, 10, 10);
+        VirtualPet testPet = new VirtualPet(null, 0, 0, 0);
+        // testPet.Feed();
         // int hungerLevel = testPet.getHungerLevel();
         // hungerLevel = 4;
-        int hungerLevel = (testPet.Feed() + 4);
+        // int hungerLevel = (testPet.Feed() + 4);
         // testPet.setHungerLevel(10);
-        assertEquals(20, hungerLevel);
+        assertEquals(15, testPet.Feed());
     }
 
     @Test
