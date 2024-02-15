@@ -8,20 +8,16 @@ public class VirtualPetTest {
 
     @Test
     public void testFeed() {
-        VirtualPet testPet = new VirtualPet(null, 0, 0, 0);
-        // testPet.Feed();
-        // int hungerLevel = testPet.getHungerLevel();
-        // hungerLevel = 4;
-        // int hungerLevel = (testPet.Feed() + 4);
-        // testPet.setHungerLevel(10);
-        assertEquals(15, testPet.Feed());
+        VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
+
+        assertEquals(15, superPet.Feed());
     }
 
     @Test
     public void testGiveWater() {
         VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
 
-        assertEquals(10, superPet.GiveWater());
+        assertEquals(15, superPet.GiveWater());
 
     }
 
@@ -29,17 +25,17 @@ public class VirtualPetTest {
     public void testPlayFetch() {
         VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
 
-        assertEquals(10, superPet.PlayFetch());
+        assertEquals(15, superPet.PlayFetch());
 
     }
 
     @Test
     public void testTick() {
-        // this.setHungerLevel(this.getHungerLevel() - 5);
-        // this.setThirstLevel(this.getThirstLevel() - 4);
-        // this.setBoredomLevel(this.getBoredomLevel() - 6);
-        // VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
+        VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
+        superPet.Tick();
 
-        // assertEquals(-5, superPet.tick());
+        assertEquals(-5, superPet.getHungerLevel());
+        assertEquals(-4, superPet.getThirstLevel());
+        assertEquals(5, superPet.getBoredomLevel());
     }
 }
