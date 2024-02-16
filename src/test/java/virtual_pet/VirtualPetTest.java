@@ -17,25 +17,23 @@ public class VirtualPetTest {
     public void testGiveWater() {
         VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
 
-        assertEquals(15, superPet.GiveWater());
-
+        assertEquals(15, superPet.giveWater());
     }
 
     @Test
     public void testPlayFetch() {
         VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
 
-        assertEquals(15, superPet.PlayFetch());
-
+        assertEquals(15, superPet.playFetch());
     }
 
     @Test
     public void testTick() {
         VirtualPet superPet = new VirtualPet(null, 0, 0, 0);
-        superPet.Tick();
+        superPet.tick();
 
         assertEquals(-5, superPet.getHungerLevel());
         assertEquals(-4, superPet.getThirstLevel());
-        assertEquals(5, superPet.getBoredomLevel());
+        assertEquals(-6, superPet.getBoredomLevel());
     }
 }

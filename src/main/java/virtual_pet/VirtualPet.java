@@ -23,8 +23,8 @@ public class VirtualPet {
     public void printUserInstructions() {
         System.out.println(" ");
         System.out.println("Please enter a number input from the following options: ");
-        System.out.println(" 1. Feed your pet");
-        System.out.println(" 2. Give your pet water");
+        System.out.println(" 1. Give your pet some Food");
+        System.out.println(" 2. Give your pet some Water");
         System.out.println(" 3. Play with your virtual pet");
         System.out.println(" 4. Get pet stats");
         System.out.println(" 5. End the program");
@@ -35,7 +35,7 @@ public class VirtualPet {
     }
 
     public String getPetName() {
-        return petName;
+        return this.petName;
     }
 
     public void setPetName(String petName) {
@@ -43,7 +43,7 @@ public class VirtualPet {
     }
 
     public int getHungerLevel() {
-        return hungerLevel;
+        return this.hungerLevel;
     }
 
     public void setHungerLevel(int hungerLevel) {
@@ -51,7 +51,7 @@ public class VirtualPet {
     }
 
     public int getThirstLevel() {
-        return thirstLevel;
+        return this.thirstLevel;
     }
 
     public void setThirstLevel(int thirstLevel) {
@@ -71,28 +71,27 @@ public class VirtualPet {
         return hungerLevel;
     }
 
-    public int GiveWater() {
+    public int giveWater() {
         this.thirstLevel += 15;
         return thirstLevel;
     }
 
-    public int PlayFetch() {
+    public int playFetch() {
         this.boredomLevel += 15;
         return boredomLevel;
     }
 
     @Override
     public String toString() {
-        String petDetails = petName + " - stats are:  " + "Hunger: " + hungerLevel + "  Thirst: " + thirstLevel
-                + "  Boredom: "
-                + boredomLevel;
+        String petDetails = this.petName + " - stats are:  " + "Hunger: " + this.hungerLevel + "  Thirst: "
+                + this.thirstLevel + "  Boredom: " + this.boredomLevel;
         return petDetails;
     }
 
-    public void Tick() {
-        hungerLevel -= 5;
-        thirstLevel -= 4;
-        boredomLevel -= 6;
+    public void tick() {
+        this.hungerLevel -= 5;
+        this.thirstLevel -= 4;
+        this.boredomLevel -= 6;
         // increase this calling objects thirst, hunger, boredom
     }
 
